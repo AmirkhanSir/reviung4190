@@ -26,3 +26,13 @@ https://imgur.com/a/C76c8xs
 15. Download firware and install .uf2 file.
 
 Or Fork this repo or make your own by downloading evrything and copy paste in your own repo.
+
+keymap tools:
+use for initial setup
+https://nickcoutsos.github.io/keymap-editor/
+
+use for keymap guide - copy keyboard.keymap in Github config folder
+https://keymap-drawer.streamlit.app/
+
+ZMK Studio direct
+https://zmk.studio/
