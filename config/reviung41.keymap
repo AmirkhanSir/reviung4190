@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -43,10 +42,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W            &kp E              &kp R                &kp T                                &kp Y  &kp U                 &kp I               &kp O             &kp P                     &kp BSPC
-&kp LCTRL  &HMR LEFT_META A  &HMR LEFT_ALT S  &HMR LEFT_SHIFT D  &HMR LEFT_CONTROL F  &kp G                                &kp H  &HMR RIGHT_CONTROL J  &HMR RIGHT_SHIFT K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &HMR K_UNDO Z     &HMR K_CUT X     &HMR K_COPY C      &HMR K_PASTE V       &HMR ESCAPE B                        &kp N  &lt 5 M               &kp COMMA           &kp DOT           &kp FSLH                  &mt RSHFT RET
-                                              &kp LALT           &mo 2                               &mt LEFT_SHIFT SPACE         &mo 1                 &kp RGUI
+&kp TAB    &kp Q             &kp W            &kp E              &kp R                &kp T                          &kp Y  &kp U                 &kp I               &kp O             &kp P                     &kp BSPC
+&kp LCTRL  &HMR LEFT_META A  &HMR LEFT_ALT S  &HMR LEFT_SHIFT D  &HMR LEFT_CONTROL F  &kp G                          &kp H  &HMR RIGHT_CONTROL J  &HMR RIGHT_SHIFT K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &HMR K_UNDO Z     &HMR K_CUT X     &HMR K_COPY C      &HMR K_PASTE V       &lt 4 B                        &kp N  &lt 5 M               &kp COMMA           &kp DOT           &kp FSLH                  &mt RSHFT RET
+                                              &mt LALT ENTER     &mo 2                         &mt LEFT_SHIFT SPACE         &mo 1                 &kp RGUI
             >;
         };
 
@@ -89,18 +88,18 @@
 
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &out OUT_USB             &out OUT_BLE  &none         &none         &none         &none         &none
-&none            &to 4            &to 5            &to 6            &to 7   &studio_unlock           &sys_reset    &to 8         &to 9         &to 10        &none         &none
+&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &out OUT_TOG             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&none            &studio_unlock   &none            &none            &none   &studio_unlock           &sys_reset    &none         &none         &bt BT_PRV    &bt BT_NXT    &none
                                                    &trans           &trans                   &tog 3                &trans        &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
+&kp ESCAPE         &kp PAGE_DOWN   &mmv MOVE_UP    &kp PAGE_UP      &kp LC(LS(TAB))     &kp LC(T)            &msc SCRL_UP            &msc SCRL_DOWN        &trans                  &trans                   &trans  &trans
+&kp RC(BACKSPACE)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LS(LC(TAB))     &kp LS(TAB)          &msc SCRL_LEFT          &msc SCRL_RIGHT       &trans                  &trans                   &trans  &trans
+&kp ENTER          &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp LA(LEFT_ARROW)  &trans               &kp LC(LS(LEFT_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(RIGHT_ARROW))  &trans  &trans
+                                                   &trans           &trans                           &trans                          &trans                &trans
             >;
         };
 
@@ -110,51 +109,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans          &mkp RCLK        &mkp MCLK       &mkp LCLK     &trans          &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans        &trans          &trans  &trans
                         &trans  &trans          &trans                   &trans          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
-            >;
-        };
-
-        OneNote {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
-            >;
-        };
-
-        ObsidianMD {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
-            >;
-        };
-
-        Photoshop {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
-            >;
-        };
-
-        Krita {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans          &trans  &trans
             >;
         };
     };
