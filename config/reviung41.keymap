@@ -41,10 +41,10 @@
             //                         | ALT | LWR | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W            &kp E              &kp R                &bootloader             &kp Y  &kp U                 &kp I               &kp O             &kp P                     &kp BSPC
-&kp LCTRL  &HMR LEFT_META A  &HMR LEFT_ALT S  &HMR LEFT_SHIFT D  &HMR LEFT_CONTROL F  &kp G                   &kp H  &HMR RIGHT_CONTROL J  &HMR RIGHT_SHIFT K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &HMR K_UNDO Z     &HMR K_CUT X     &HMR K_COPY C      &HMR K_PASTE V       &lt 4 B                 &kp N  &kp M                 &kp COMMA           &kp DOT           &kp FSLH                  &mt RSHFT RET
-                                              &mt LALT ENTER     &mo 2                             &kp SPACE         &mo 1                 &kp RGUI
+&kp TAB    &kp Q             &kp W            &kp E              &kp R                &rgb_ug RGB_TOG                            &kp Y  &kp U                 &kp I               &kp O             &kp P                     &kp BSPC
+&kp LCTRL  &HMR LEFT_META A  &HMR LEFT_ALT S  &HMR LEFT_SHIFT D  &HMR LEFT_CONTROL F  &rgb_ug RGB_COLOR_HSB(136,0,0)             &kp H  &HMR RIGHT_CONTROL J  &HMR RIGHT_SHIFT K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &HMR K_UNDO Z     &HMR K_CUT X     &HMR K_COPY C      &HMR K_PASTE V       &rgb_ug RGB_BRI                            &kp N  &kp M                 &kp COMMA           &kp DOT           &kp FSLH                  &mt RSHFT RET
+                                              &mt LALT ENTER     &mo 2                                                &kp SPACE         &mo 1                 &kp RGUI
             >;
         };
 
